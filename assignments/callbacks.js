@@ -81,14 +81,19 @@ console.log(isInside);
 //test remove duplicate method:
 let arr = [1, 2, 1, 1, 2, 2, 4, 5, 5, 5, 5];
 
-
 //let uniq=[...new Set(arr)];
 
 // let uniq = arr.filter((item, index, a) => {
 //     return a.indexOf(item) === index;
 // })
+let noDuplicate =[];
+arr.forEach(item =>{
+    if(!noDuplicate.includes(item))
+        noDuplicate.push(item);
+});
 
-//console.log(uniq);
+console.log("========================")
+console.log(noDuplicate);
 
 function removeDuplicates(array, cb) {
     // removeDuplicates removes all duplicate values from the given array.

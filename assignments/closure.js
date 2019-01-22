@@ -8,6 +8,7 @@ function parent() {
     //debugger;
     const parentHello = "Hey I'm a parent";
     console.log(parentHello);
+    console.log(greet);
     function grandParent(parentHello) {
         //debugger;
         const grandParentHello = "Hey I'm a grandParent";

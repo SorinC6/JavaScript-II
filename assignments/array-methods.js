@@ -88,11 +88,11 @@ console.log(ticketPriceTotal);
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// The director is still DRUNK WITH POWER and whats the name of the businesses higher than 100 to send them invites to a private pm party 
+// The director is still DRUNK WITH POWER and whats the name of the donation than is higher than 100 to send them invites to a private pm party 
 // Problem 1
 
 let bigDonation = runners.map(item => {
-    return item.donation > 100 ? `${item.first_name} whith donation of ${item.donation}` : item;
+    return item.donation > 100 ? `${item.first_name} whith donation of ${item.donation} Email: ${item.email}` : item;
 });
 
 console.log(bigDonation);
@@ -108,3 +108,18 @@ let bigDonationSum = runners.filter(item => {
 },0);
 
 console.log(bigDonationSum);
+
+
+// now the director has change his mind and whants only the biggest donation  so he cand invite that person the his party
+
+//Max in a array
+//let textArr= [1,2,4,5,22,34,3];
+
+console.log('======+++++++++++')
+let biggestDonation=runners.map(item =>{
+    return item.donation;
+}) 
+
+console.log(Math.max(...biggestDonation));
+
+
