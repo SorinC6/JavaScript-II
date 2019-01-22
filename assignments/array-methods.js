@@ -80,14 +80,31 @@ console.log(largeShirts('M'));
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations into a ticketPriceTotal array and log the result
-let ticketPriceTotal = [];
+let ticketPriceTotal = runners.reduce((acc, item) => {
+    return acc + item.donation;
+}, 0);
 console.log(ticketPriceTotal);
 
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
+// The director is still DRUNK WITH POWER and whats the name of the businesses higher than 100 to send them invites to a private pm party 
 // Problem 1
+
+let bigDonation = runners.map(item => {
+    return item.donation > 100 ? `${item.first_name} whith donation of ${item.donation}` : item;
+});
+
+console.log(bigDonation);
 
 // Problem 2
 
-// Problem 3
+//Now the director wants the sum of the big donation
+
+let bigDonationSum = runners.filter(item => {
+    return item.donation > 100;
+}).reduce((acc, item) => {
+    return acc + item.donation;
+},0);
+
+console.log(bigDonationSum);
